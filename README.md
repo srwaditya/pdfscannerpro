@@ -1,17 +1,92 @@
-# doc_scanner
+# 🔒 DocScanner Pro — Privacy Policy
 
-A new Flutter project.
+This folder contains the privacy policy page for the **DocScanner Pro** Android app (Document Scanner & PDF Creator).
 
-## Getting Started
+## 📁 Files
 
-This project is a starting point for a Flutter application.
+| File | Description |
+|------|-------------|
+| `index.html` | The privacy policy web page (dark themed, mobile-friendly) |
+| `README.md` | This file |
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 🚀 How to Host on GitHub Pages
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Follow these steps to get a live URL for your Play Store listing:
+
+### Step 1 — Create a GitHub Repository
+1. Go to [github.com/new](https://github.com/new)
+2. Repository name: `docscanner-privacy`
+3. Set it to **Public**
+4. ❌ Do **not** check "Add a README"
+5. Click **Create repository**
+
+### Step 2 — Push the Files
+Run these commands from the `privacy_policy` folder:
+```bash
+cd "/Users/srw.aditya/Downloads/pdf scaneer/privacy_policy"
+git remote add origin https://github.com/srwaditya/docscanner-privacy.git
+git push -u origin main
+```
+
+### Step 3 — Enable GitHub Pages
+1. Go to your repo → **Settings** tab
+2. Scroll to **Pages** in the left sidebar
+3. Under **Source**, select `main` branch and `/ (root)` folder
+4. Click **Save**
+
+### Step 4 — Get Your URL
+After ~1 minute, your privacy policy will be live at:
+```
+https://srwaditya.github.io/docscanner-privacy/
+```
+
+---
+
+## 📱 Use in Play Store
+
+Paste your GitHub Pages URL in:
+
+> **Google Play Console → App Content → Privacy Policy → Save**
+
+---
+
+## 📋 What the Policy Covers
+
+The privacy policy addresses all permissions used by DocScanner Pro:
+
+| Permission | Covered |
+|------------|---------|
+| `android.permission.CAMERA` | ✅ Yes |
+| `android.permission.READ_EXTERNAL_STORAGE` | ✅ Yes |
+| `android.permission.WRITE_EXTERNAL_STORAGE` | ✅ Yes |
+| `android.permission.READ_MEDIA_IMAGES` | ✅ Yes |
+| `android.permission.INTERNET` (AdMob) | ✅ Yes |
+| `android.permission.ACCESS_NETWORK_STATE` | ✅ Yes |
+
+---
+
+## 📲 Add to App (Optional)
+
+You can add a **"Privacy Policy"** button in your Flutter app's settings screen using `url_launcher`:
+
+```dart
+import 'package:url_launcher/url_launcher.dart';
+
+const privacyUrl = 'https://srwaditya.github.io/docscanner-privacy/';
+
+Future<void> openPrivacyPolicy() async {
+  final uri = Uri.parse(privacyUrl);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
+  }
+}
+```
+
+---
+
+## 📬 Contact
+
+Developer: **Aditya Shrivastava**  
+Email: srw.aditya@gmail.com
