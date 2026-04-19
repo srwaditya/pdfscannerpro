@@ -16,7 +16,8 @@ This folder contains the privacy policy page for the **DocScanner Pro** Android 
 Follow these steps to get a live URL for your Play Store listing:
 
 ### Step 1 — Create a GitHub Repository
-1. Go to [github.com/new](https://github.com/new)
+1. Go to [github.com/new](https://github.com/pdfscannerpro
+
 2. Repository name: `docscanner-privacy`
 3. Set it to **Public**
 4. ❌ Do **not** check "Add a README"
