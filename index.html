@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – DocScanner Pro</title>
+  <meta name="description" content="Privacy Policy for DocScanner Pro – Document Scanner & PDF Creator app by Aditya Shrivastava." />
+  <style>
+    :root {
+      --bg: #0d0f14;
+      --surface: #14171f;
+      --card: #1a1d27;
+      --border: #2a2d3d;
+      --accent: #5b6af5;
+      --accent2: #7c3aed;
+      --text: #e8eaf6;
+      --muted: #9298b8;
+      --green: #22d3a5;
+      --radius: 14px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #0d0f14 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(91,106,245,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .app-icon {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 22px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 36px;
+      box-shadow: 0 8px 32px rgba(91,106,245,0.35);
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(34,211,165,0.12);
+      color: var(--green);
+      border: 1px solid rgba(34,211,165,0.3);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    /* ── Section card ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 30px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: rgba(91,106,245,0.45); }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .icon-box {
+      width: 38px; height: 38px;
+      background: rgba(91,106,245,0.14);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    p, li {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    ul {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    li::marker { color: var(--accent); }
+
+    /* permissions highlight */
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.88rem;
+    }
+    .perm-table th {
+      text-align: left;
+      padding: 8px 12px;
+      background: rgba(91,106,245,0.1);
+      color: var(--accent);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+    .perm-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(42,45,61,0.6);
+      color: var(--muted);
+      vertical-align: top;
+    }
+    .perm-table tr:last-child td { border-bottom: none; }
+    .perm-name {
+      font-family: 'Courier New', monospace;
+      color: #c0c8ff;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    /* highlight box */
+    .highlight {
+      background: rgba(34,211,165,0.06);
+      border: 1px solid rgba(34,211,165,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 12px;
+      color: var(--green);
+      font-size: 0.9rem;
+    }
+    .highlight strong { color: #fff; }
+
+    /* contact */
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-link:hover { text-decoration: underline; }
+
+    /* divider */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 8px 0 16px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    footer strong { color: var(--text); }
+
+    @media (max-width: 520px) {
+      .card { padding: 20px 18px; }
+      .perm-table { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">📄</div>
+  <h1>DocScanner Pro</h1>
+  <p>Privacy Policy — Document Scanner &amp; PDF Creator</p>
+  <div class="badge">✓ Your privacy is our priority</div>
+</header>
+
+<main>
+
+  <!-- Intro -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">📋</div>
+      <h2>Introduction</h2>
+    </div>
+    <p>
+      This Privacy Policy describes how <strong>DocScanner Pro</strong> ("we", "our", or "the App"),
+      developed by <strong>Aditya Shrivastava</strong>, handles information when you use our document
+      scanning and PDF creation application on Android.
+    </p>
+    <div class="divider"></div>
+    <p>
+      By using DocScanner Pro, you agree to the practices described in this policy.
+      If you do not agree, please discontinue use of the app.
+    </p>
+    <p style="margin-top:10px;font-size:0.85rem;">
+      <strong style="color:#fff;">Effective date:</strong> April 19, 2025 &nbsp;|&nbsp;
+      <strong style="color:#fff;">Last updated:</strong> April 19, 2025
+    </p>
+  </div>
+
+  <!-- Permissions & Data -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">🔐</div>
+      <h2>Permissions &amp; Data We Access</h2>
+    </div>
+    <p>DocScanner Pro requests the following Android permissions. All data stays on your device — we do <strong style="color:#fff;">not</strong> collect, upload, or sell it.</p>
+    <table class="perm-table">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why it's needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="perm-name">CAMERA</span></td>
+          <td>To capture photos of documents for scanning. Camera frames are processed locally and never transmitted.</td>
+        </tr>
+        <tr>
+          <td><span class="perm-name">READ_EXTERNAL_STORAGE</span></td>
+          <td>To let you import existing images or PDFs from your device storage.</td>
+        </tr>
+        <tr>
+          <td><span class="perm-name">WRITE_EXTERNAL_STORAGE</span></td>
+          <td>To save scanned PDFs to your device (Android 9 and below only).</td>
+        </tr>
+        <tr>
+          <td><span class="perm-name">READ_MEDIA_IMAGES</span></td>
+          <td>To access photos on Android 13+ for document import.</td>
+        </tr>
+        <tr>
+          <td><span class="perm-name">INTERNET</span></td>
+          <td>Required by Google Mobile Ads (AdMob) to display advertisements.</td>
+        </tr>
+        <tr>
+          <td><span class="perm-name">ACCESS_NETWORK_STATE</span></td>
+          <td>Checks connectivity status before loading ads.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>🔒 No cloud uploads.</strong> All scanned documents and PDFs are stored exclusively on your device. We never access, transmit, or store your documents on external servers.
+    </div>
+  </div>
+
+  <!-- Advertising -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">📢</div>
+      <h2>Advertising (Google AdMob)</h2>
+    </div>
+    <p>
+      DocScanner Pro uses <strong style="color:#fff;">Google AdMob</strong> to serve advertisements.
+      AdMob may collect and use certain data to deliver interest-based ads, including:
+    </p>
+    <ul>
+      <li>Device identifiers (Advertising ID)</li>
+      <li>IP address and approximate location</li>
+      <li>App usage data and interaction events</li>
+    </ul>
+    <p style="margin-top:12px;">
+      This data is governed by
+      <a class="contact-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      You can opt out of personalized ads via your device's <strong style="color:#fff;">Settings → Google → Ads → Opt out of Ads Personalization</strong>.
+    </p>
+  </div>
+
+  <!-- No personal data -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">🚫</div>
+      <h2>Data We Do NOT Collect</h2>
+    </div>
+    <ul>
+      <li>We do not collect your name, email, or any account information</li>
+      <li>We do not upload your documents, images, or PDFs to any server</li>
+      <li>We do not track your location</li>
+      <li>We do not share your data with third parties (except AdMob, as described above)</li>
+      <li>We do not use analytics SDKs or crash reporting tools</li>
+    </ul>
+  </div>
+
+  <!-- Children -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">👶</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>
+      DocScanner Pro is not directed at children under the age of 13. We do not knowingly collect
+      any personal information from children. If you believe a child has provided us with personal
+      information, please contact us and we will promptly delete it.
+    </p>
+  </div>
+
+  <!-- Security -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">🛡️</div>
+      <h2>Security</h2>
+    </div>
+    <p>
+      Since all document data is processed and stored locally on your device, your files are
+      protected by your device's built-in security (screen lock, encryption). We recommend keeping
+      your device's OS updated for the best security protection.
+    </p>
+  </div>
+
+  <!-- Changes -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">🔄</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>
+      We may update this Privacy Policy from time to time. Changes will be reflected by updating the
+      "Last updated" date at the top of this page. We encourage you to review this page periodically.
+      Continued use of DocScanner Pro after changes constitutes your acceptance of the updated policy.
+    </p>
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <div class="card-header">
+      <div class="icon-box">✉️</div>
+      <h2>Contact Us</h2>
+    </div>
+    <p>
+      If you have any questions or concerns about this Privacy Policy, please contact us at:
+    </p>
+    <p style="margin-top: 12px;">
+      📧 <a class="contact-link" href="mailto:srw.aditya@gmail.com">srw.aditya@gmail.com</a>
+    </p>
+    <p style="margin-top: 8px; font-size: 0.88rem;">
+      Developer: <strong style="color:#fff;">Aditya Shrivastava</strong>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 <strong>Aditya Shrivastava</strong> · DocScanner Pro · All rights reserved</p>
+  <p style="margin-top:6px;">This privacy policy was last updated on April 19, 2025.</p>
+</footer>
+
+</body>
+</html>
